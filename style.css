@@ -11,13 +11,17 @@
     --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --spacing: 0.25rem;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-las-blue: #0064ff;
   }
 }
 @layer base {
@@ -175,9 +179,6 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -199,11 +200,20 @@
   .justify-around {
     justify-content: space-around;
   }
-  .gap-6 {
-    gap: calc(var(--spacing) * 6);
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-7 {
+    gap: calc(var(--spacing) * 7);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-30 {
+    gap: calc(var(--spacing) * 30);
   }
   .self-center {
     align-self: center;
@@ -219,22 +229,30 @@
   .border-slate-200 {
     border-color: var(--color-slate-200);
   }
-  .border-slate-600 {
-    border-color: var(--color-slate-600);
-  }
-  .border-slate-800 {
-    border-color: var(--color-slate-800);
-  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
+  }
+  .p-30 {
+    padding: calc(var(--spacing) * 30);
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-7xl {
     font-size: var(--text-7xl);
     line-height: var(--tw-leading, var(--text-7xl--line-height));
   }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-las-blue {
+    color: var(--color-las-blue);
   }
   .text-slate-800 {
     color: var(--color-slate-800);
